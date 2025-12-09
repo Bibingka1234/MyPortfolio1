@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #5c1e47, #a67c52);
+            color:black;
+        }
+
+        /* Navigation */
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 40px;
+            position: fixed;
+            top: 0;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        nav h2 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffda9e;
+        }
+
+        /* Hero Section */
+        #home {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding-top: 80px;
+        }
+            .profile-pic {
+            width: 180px;
+            height: 180px;
+            align-items: center;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+            animation: float 3s infinite ease-in-out;
+
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0); }
+        }
+
+        #home h1 {
+            font-size: 40px;
+            margin-top: 20px;
+            font-weight: 700;
+        }
+
+        #home p {
+            width: 60%;
+            max-width: 600px;
+            margin-top: 10px;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: #ffda9e;
+            border-radius: 30px;
+            color: #5c3b1e;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background:#5c3b1e; 
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 10%;
+        }
+
+        h2.section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        /* Cards */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(182, 185, 8, 0.76);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(12px);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        /* Contact */
+        .contact-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            width: 60%;
+            margin: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            #home h1 { font-size: 28px; }
+            #home p { width: 90%; }
+            nav { padding: 10px 20px; }
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h2>MyPortfolio</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <img src="https://img.rts.ch/articles/2017/image/ny7m4q-27773231.image?w=0&h=NaN" class="profile-pic">
+        <h1>Hello, I'm <span style="color: #ffda9e;">Royette Advincola</span></h1>
+        <p>I’m a creative beginner exploring new skills and sharing my projects as I grow. 
+           I love learning, experimenting, and building things that make people smile.</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="card">
+            <p>
+                Hello there!!
+                Welcome to my page.
+                I’m glad you’re here! This space is where I share my work, ideas, and the things I’m learning along the way. 
+                Feel free to look around and get to know me!
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Project One</h3>
+                <p>A modern website built using HTML, CSS, and JavaScript.</p>
+            </div>
+
+            <div class="card">
+                <h3>Project Two</h3>
+                <p>A responsive portfolio layout with animations and effects.</p>
+            </div>
+
+            <div class="card">
+                <h3>Project Three</h3>
+                <p>A mini-vending machine that can work all day.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-box">
+            <p>Email: <a href="https://workspace.google.com/intl/en-US/gmail/"target="_blank" rel="noopener noreferrer">AlexG@gmail.com</a>
+            <p>Instagram: <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">amomentbeforewedie</a>
+            <p>Phone: 09654123478</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Alorica Football | All Rights Reserved
+    </footer>
+
+</body>
+</html>
